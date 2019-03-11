@@ -1,5 +1,6 @@
 {
     "name": "mariya/brain-games",
+    "bin": ["bin/brain-games"],
     "authors": [
         {
             "name": "Mariya1316",
