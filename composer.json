@@ -1,6 +1,9 @@
 {
     "name": "mariya/brain-games",
     "bin": ["bin/brain-games"],
+    "type": "library",
+    "description": "The first PHP project, a set of console mini-games",
+    "keywords": ["BrainGames", "Console", "PHP", "project"],
     "authors": [
         {
             "name": "Mariya1316",
