@@ -1,5 +1,5 @@
 <?php
-namespace BrainGames\Calc;
+namespace BrainGames\games\Calc;
 use function BrainGames\Core\runCore;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
@@ -9,10 +9,11 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-function runGame()
+function runCalc()
 {
     $numberRound = 3;
     $arrayOperations = ["+", "-", "*"];
+    $gameDescription = 'What is the result of the expression?';
     for ($i = 0; $i < $numberRound; $i++) {
         $firstNumber = rand();
         $secondNumber = rand();
@@ -26,5 +27,5 @@ function runGame()
             $arrayCorrectAnswers[$i] = $firstNumber * $secondNumber;
         }
     }
-    runCore($arrayQuestions, $arrayCorrectAnswers, $numberRound);
+    runCore($arrayQuestions, $arrayCorrectAnswers, $numberRound, $gameDescription);
 }

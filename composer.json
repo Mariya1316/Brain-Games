@@ -2,7 +2,8 @@
     "name": "mariya/brain-games",
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "type": "project",
     "description": "The first PHP project, a set of console mini-games",
@@ -20,8 +21,8 @@
         "files": [
             "src/Cli.php",
             "src/Core.php",
-            "src/Even.php",
-            "src/Calc.php"
+            "src/Calc.php",
+            "src/Even.php"
         ]
     },
     "require": {

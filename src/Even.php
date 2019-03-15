@@ -1,5 +1,5 @@
 <?php
-namespace BrainGames\Even;
+namespace BrainGames\games\Even;
 use function BrainGames\Core\runCore;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
@@ -13,12 +13,13 @@ function isEven($number)
 {
     return $number % 2 === 0;
 }
-function runGame()
+function runEven()
 {
     $numberRound = 3;
+    $gameDescription = 'Answer "yes" if number even otherwise answer "no".';
     for ($i = 0; $i < $numberRound; $i++) {
         $arrayQuestions[$i] = rand();
         $arrayCorrectAnswers[$i] = isEven($arrayQuestions[$i]) ? 'yes' : 'no';
     }
-    runCore($arrayQuestions, $arrayCorrectAnswers, $numberRound);
+    runCore($arrayQuestions, $arrayCorrectAnswers, $numberRound, $gameDescription);
 }

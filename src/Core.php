@@ -4,10 +4,10 @@ namespace BrainGames\Core;
 use function \cli\line;
 use function \cli\prompt;
 
-function runCore($arrayQuestions, $arrayCorrectAnswers, $numberRound)
+function runCore($arrayQuestions, $arrayCorrectAnswers, $numberRound, $gameDescription)
 {
     line('Welcome to the Brain Game!');
-    line('Answer "yes" if number even otherwise answer "no".');
+    line($gameDescription);
     line();
     $name = prompt('May I have your name?');
     line('Hello, %s!', $name);
