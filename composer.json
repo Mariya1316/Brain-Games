@@ -3,7 +3,8 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "type": "project",
     "description": "The first PHP project, a set of console mini-games",
@@ -22,7 +23,8 @@
             "src/Cli.php",
             "src/Core.php",
             "src/Calc.php",
-            "src/Even.php"
+            "src/Even.php",
+            "src/Gcd.php"
         ]
     },
     "require": {
