@@ -19,7 +19,9 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/BrainEven.php"
+            "src/Core.php",
+            "src/Even.php",
+            "src/Calc.php"
         ]
     },
     "require": {
