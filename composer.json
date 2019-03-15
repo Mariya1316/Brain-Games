@@ -1,6 +1,9 @@
 {
     "name": "mariya/brain-games",
-    "bin": ["bin/brain-games"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
     "type": "project",
     "description": "The first PHP project, a set of console mini-games",
     "keywords": ["BrainGames", "Console", "PHP", "project"],
@@ -14,7 +17,10 @@
         "phpcs": "phpcs"
     },
     "autoload": {
-        "files": ["src/Cli.php"]
+        "files": [
+            "src/Cli.php",
+            "src/BrainEven.php"
+        ]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
