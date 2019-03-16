@@ -1,10 +1,10 @@
 {
     "name": "mariya/brain-games",
     "bin": [
-        "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "type": "project",
     "description": "The first PHP project, a set of console mini-games",
@@ -20,11 +20,11 @@
     },
     "autoload": {
         "files": [
-            "src/Cli.php",
             "src/Core.php",
-            "src/Calc.php",
-            "src/Even.php",
-            "src/Gcd.php"
+            "src/games/Calc.php",
+            "src/games/Even.php",
+            "src/games/Gcd.php",
+            "src/games/Progression.php"
         ]
     },
     "require": {
