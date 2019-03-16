@@ -1,27 +1,29 @@
 <?php
 namespace BrainGames\games\Progression;
 use function BrainGames\Core\runCore;
-use const BrainGames\Core\NUMBERROUND;
+use const BrainGames\Core\ROUNDS;
+const DESCRIPTION = 'What number is missing in the progression?';
+const MIN = 1;
+const MAX = 100;
+const LENGTHPROGRESSION = 10;
 function createProgression()
 {
-    $firstNumber = rand(0, 100);
-    $step = rand(0, 100);
-    $progression[0] = $firstNumber;
-    for ($i = 1; $i < 10; $i++) {
-        $progression[$i] = $progression[$i - 1] + $step;
+    $start = rand(MIN, MAX);
+    $step = rand(MIN, MAX);
+    for ($i = 0; $i < LENGTHPROGRESSION; $i++) {
+        $progression[$i] = $start + $step * $i;
     }
     return $progression;
 }
 function runProgression()
 {
-    $gameDescription = 'What number is missing in the progression?';
-    for ($i = 0; $i < NUMBERROUND; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $progression = createProgression();
         $missingPossition = array_rand($progression);
-        $missingNumber = $progression[$missingPossition];
+        $correctAnswer = $progression[$missingPossition];
         $progression[$missingPossition] = '..';
-        $arrayQuestionsAnswers[$i][0] = implode(' ', $progression);
-        $arrayQuestionsAnswers[$i][1] = $missingNumber;
+        $question = implode(' ', $progression);
+        $questionsAnswers[$i] = [$question, $correctAnswer];
     }
-    runCore($arrayQuestionsAnswers, $gameDescription);
+    runCore($questionsAnswers, DESCRIPTION);
 }

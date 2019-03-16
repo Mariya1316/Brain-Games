@@ -1,19 +1,20 @@
 <?php
 namespace BrainGames\games\Even;
 use function BrainGames\Core\runCore;
-use const BrainGames\Core\NUMBERROUND;
+use const BrainGames\Core\ROUNDS;
+const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".';
+const MIN = 1;
+const MAX = 100;
 function isEven($number)
 {
     return $number % 2 === 0;
 }
 function runEven()
 {
-    $gameDescription = 'Answer "yes" if number even otherwise answer "no".';
-    for ($i = 0; $i < NUMBERROUND; $i++) {
-        $question = rand(1, 100);
-        $arrayQuestionsAnswers[$i][0] = $question;
+    for ($i = 0; $i < ROUNDS; $i++) {
+        $question = rand(MIN, MAX);
         $correctAnswer = isEven($question) ? 'yes' : 'no';
-        $arrayQuestionsAnswers[$i][1] = $correctAnswer;
+        $questionsAnswers[$i] = [$question, $correctAnswer];
     }
-    runCore($arrayQuestionsAnswers, $gameDescription);
+    runCore($questionsAnswers, DESCRIPTION);
 }

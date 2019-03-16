@@ -1,24 +1,26 @@
 <?php
 namespace BrainGames\games\Prime;
 use function BrainGames\Core\runCore;
-use const BrainGames\Core\NUMBERROUND;
+use const BrainGames\Core\ROUNDS;
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const MIN = 1;
+const MAX = 100;
 function isPrime($number)
 {
-    for ($i = 2; $i < $number; $i++) {
+    $quantityDivisors = 0;
+    for ($i = 1; $i <= $number; $i++) {
         if ($number % $i === 0) {
-            return false;
+            $quantityDivisors += 1;
         }
     }
-    return true;
+    return $quantityDivisors === 2 ? true : false;
 }
 function runPrime()
 {
-    $gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    for ($i = 0; $i < NUMBERROUND; $i++) {
-        $question = rand(1, 100);
-        $arrayQuestionsAnswers[$i][0] = $question;
+    for ($i = 0; $i < ROUNDS; $i++) {
+        $question = rand(MIN, MAX);
         $correctAnswer = isPrime($question) ? 'yes' : 'no';
-        $arrayQuestionsAnswers[$i][1] = $correctAnswer;
+        $questionsAnswers[$i] = [$question, $correctAnswer];
     }
-    runCore($arrayQuestionsAnswers, $gameDescription);
+    runCore($questionsAnswers, DESCRIPTION);
 }
