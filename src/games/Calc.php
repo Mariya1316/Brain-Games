@@ -27,9 +27,9 @@ function runCalc()
         $firstNumber = rand(MIN, MAX);
         $secondNumber = rand(MIN, MAX);
         $keyOperation = array_rand(OPERATIONS);
-        $question = "{$firstNumber} {OPERATIONS[$keyOperation]} {$secondNumber}";
+        $question = $firstNumber . OPERATIONS[$keyOperation] . $secondNumber;
         $correctAnswer = calculateAnswer($keyOperation, $firstNumber, $secondNumber);
-        $questionsAnswers[$i] = [$question, $correctAnswer];
+        $gameData[$i] = [$question, $correctAnswer];
     }
-    runCore($questionsAnswers, DESCRIPTION);
+    runCore($gameData, DESCRIPTION);
 }

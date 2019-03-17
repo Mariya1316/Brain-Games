@@ -6,7 +6,7 @@ use function \cli\prompt;
 
 const ROUNDS = 3;
 
-function runCore($questionsAnswers, $gameDescription)
+function runCore($gameData, $gameDescription)
 {
     line('Welcome to the Brain Game!');
     line($gameDescription);
@@ -15,7 +15,7 @@ function runCore($questionsAnswers, $gameDescription)
     line('Hello, %s!', $name);
     line();
     for ($i = 0; $i < ROUNDS; $i++) {
-        [$question, $correctAnswer] = $questionsAnswers[$i];
+        [$question, $correctAnswer] = $gameData[$i];
         line('Question: %s', $question);
         $answer = prompt('Your answer ');
         if ($answer === $correctAnswer) {

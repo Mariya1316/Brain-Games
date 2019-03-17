@@ -27,7 +27,7 @@ function runGcd()
         $secondNumber = rand(MIN, MAX);
         $question = "{$firstNumber} {$secondNumber}";
         $correctAnswer = calculateGcd($firstNumber, $secondNumber);
-        $questionsAnswers[$i] = [$question, $correctAnswer];
+        $gameData[$i] = [$question, $correctAnswer];
     }
-    runCore($questionsAnswers, DESCRIPTION);
+    runCore($gameData, DESCRIPTION);
 }

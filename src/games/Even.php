@@ -18,7 +18,7 @@ function runEven()
     for ($i = 0; $i < ROUNDS; $i++) {
         $question = rand(MIN, MAX);
         $correctAnswer = isEven($question) ? 'yes' : 'no';
-        $questionsAnswers[$i] = [$question, $correctAnswer];
+        $gameData[$i] = [$question, $correctAnswer];
     }
-    runCore($questionsAnswers, DESCRIPTION);
+    runCore($gameData, DESCRIPTION);
 }
