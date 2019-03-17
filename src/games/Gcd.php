@@ -14,14 +14,14 @@ function calculateGcd($firstNumber, $secondNumber)
             $firstNumber = $firstNumber % $secondNumber;
         }
     }
-    return $firstNumber + $secondNumber;
+    return strval($firstNumber + $secondNumber);
 }
 function runGcd()
 {
     for ($i = 0; $i < ROUNDS; $i++) {
         $firstNumber = rand(MIN, MAX);
         $secondNumber = rand(MIN, MAX);
-        $question = $firstNumber . " " . $secondNumber;
+        $question = "{$firstNumber} {$secondNumber}";
         $correctAnswer = calculateGcd($firstNumber, $secondNumber);
         $questionsAnswers[$i] = [$question, $correctAnswer];
     }

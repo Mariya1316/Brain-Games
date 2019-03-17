@@ -10,11 +10,11 @@ function calculateAnswer($keyOperation, $firstNumber, $secondNumber)
 {
     switch ($keyOperation) {
         case 0:
-            return $firstNumber + $secondNumber;
+            return strval($firstNumber + $secondNumber);
         case 1:
-            return $firstNumber - $secondNumber;
+            return strval($firstNumber - $secondNumber);
         case 2:
-            return $firstNumber * $secondNumber;
+            return strval($firstNumber * $secondNumber);
     }
 }
 function runCalc()
@@ -23,7 +23,7 @@ function runCalc()
         $firstNumber = rand(MIN, MAX);
         $secondNumber = rand(MIN, MAX);
         $keyOperation = array_rand(OPERATIONS);
-        $question = $firstNumber . " " . OPERATIONS[$keyOperation] . " " . $secondNumber;
+        $question = "{$firstNumber} {OPERATIONS[$keyOperation]} {$secondNumber}";
         $correctAnswer = calculateAnswer($keyOperation, $firstNumber, $secondNumber);
         $questionsAnswers[$i] = [$question, $correctAnswer];
     }

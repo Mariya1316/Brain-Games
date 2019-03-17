@@ -7,13 +7,16 @@ const MIN = 1;
 const MAX = 100;
 function isPrime($number)
 {
-    $quantityDivisors = 0;
-    for ($i = 1; $i <= $number; $i++) {
-        if ($number % $i === 0) {
-            $quantityDivisors += 1;
+    if ($number > 1) {
+        for ($i = 2; $i < $number; $i++) {
+            if ($number % $i === 0) {
+                return false;
+            }
         }
+    } else {
+        return false;
     }
-    return $quantityDivisors === 2 ? true : false;
+    return true;
 }
 function runPrime()
 {

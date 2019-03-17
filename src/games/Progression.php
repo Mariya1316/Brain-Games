@@ -5,12 +5,10 @@ use const BrainGames\Core\ROUNDS;
 const DESCRIPTION = 'What number is missing in the progression?';
 const MIN = 1;
 const MAX = 100;
-const LENGTHPROGRESSION = 10;
-function createProgression()
+const LENGTH_PROGRESSION = 10;
+function createProgression($start, $step, $lengthProgression)
 {
-    $start = rand(MIN, MAX);
-    $step = rand(MIN, MAX);
-    for ($i = 0; $i < LENGTHPROGRESSION; $i++) {
+    for ($i = 0; $i < LENGTH_PROGRESSION; $i++) {
         $progression[$i] = $start + $step * $i;
     }
     return $progression;
@@ -18,9 +16,11 @@ function createProgression()
 function runProgression()
 {
     for ($i = 0; $i < ROUNDS; $i++) {
-        $progression = createProgression();
+        $start = rand(MIN, MAX);
+        $step = rand(MIN, MAX);
+        $progression = createProgression($start, $step, LENGTH_PROGRESSION);
         $missingPossition = array_rand($progression);
-        $correctAnswer = $progression[$missingPossition];
+        $correctAnswer = strval($progression[$missingPossition]);
         $progression[$missingPossition] = '..';
         $question = implode(' ', $progression);
         $questionsAnswers[$i] = [$question, $correctAnswer];

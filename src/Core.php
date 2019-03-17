@@ -16,7 +16,7 @@ function runCore($questionsAnswers, $gameDescription)
         [$question, $correctAnswer] = $questionsAnswers[$i];
         line('Question: %s', $question);
         $answer = prompt('Your answer ');
-        if ($answer == $correctAnswer) {
+        if ($answer === $correctAnswer) {
             line('Correct!');
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
