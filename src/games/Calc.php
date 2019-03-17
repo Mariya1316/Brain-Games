@@ -1,11 +1,14 @@
 <?php
 namespace BrainGames\games\Calc;
+
 use function BrainGames\Core\runCore;
 use const BrainGames\Core\ROUNDS;
+
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATIONS = array("+", "-", "*");
 const MIN = 0;
 const MAX = 100;
+
 function calculateAnswer($keyOperation, $firstNumber, $secondNumber)
 {
     switch ($keyOperation) {
@@ -17,6 +20,7 @@ function calculateAnswer($keyOperation, $firstNumber, $secondNumber)
             return strval($firstNumber * $secondNumber);
     }
 }
+
 function runCalc()
 {
     for ($i = 0; $i < ROUNDS; $i++) {

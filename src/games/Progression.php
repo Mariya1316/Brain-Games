@@ -1,11 +1,14 @@
 <?php
 namespace BrainGames\games\Progression;
+
 use function BrainGames\Core\runCore;
 use const BrainGames\Core\ROUNDS;
+
 const DESCRIPTION = 'What number is missing in the progression?';
 const MIN = 1;
 const MAX = 100;
 const LENGTH_PROGRESSION = 10;
+
 function createProgression($start, $step, $lengthProgression)
 {
     for ($i = 0; $i < LENGTH_PROGRESSION; $i++) {
@@ -13,6 +16,7 @@ function createProgression($start, $step, $lengthProgression)
     }
     return $progression;
 }
+
 function runProgression()
 {
     for ($i = 0; $i < ROUNDS; $i++) {

@@ -3,7 +3,9 @@ namespace BrainGames\Core;
 
 use function \cli\line;
 use function \cli\prompt;
+
 const ROUNDS = 3;
+
 function runCore($questionsAnswers, $gameDescription)
 {
     line('Welcome to the Brain Game!');
