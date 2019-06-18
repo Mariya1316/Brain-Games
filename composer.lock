@@ -4,8 +4,274 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "225012ee8c72007fae8525f4ac145213",
+    "content-hash": "aac700df1417a5a3eb0420a42c3b905b",
     "packages": [
+        {
+            "name": "docopt/docopt",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/docopt/docopt.php.git",
+                "reference": "d2ee65c2fe4be78f945a48edd02be45843b39423"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/docopt/docopt.php/zipball/d2ee65c2fe4be78f945a48edd02be45843b39423",
+                "reference": "d2ee65c2fe4be78f945a48edd02be45843b39423",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/docopt.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Blake Williams",
+                    "email": "code@shabbyrobe.org",
+                    "homepage": "http://docopt.org/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Port of Python's docopt for PHP 5.3",
+            "homepage": "http://github.com/docopt/docopt.php",
+            "keywords": [
+                "cli",
+                "docs"
+            ],
+            "time": "2015-10-30T03:21:23+00:00"
+        },
+        {
+            "name": "funct/funct",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpfunct/funct.git",
+                "reference": "3f01f3f8f13c9f6b02a43b3ce65da141fdce3e40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpfunct/funct/zipball/3f01f3f8f13c9f6b02a43b3ce65da141fdce3e40",
+                "reference": "3f01f3f8f13c9f6b02a43b3ce65da141fdce3e40",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Funct\\": "src"
+                },
+                "files": [
+                    "src/Collection.php",
+                    "src/General.php",
+                    "src/Invoke.php",
+                    "src/Object.php",
+                    "src/Strings.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aurimas Niekis",
+                    "email": "aurimas@niekis.lt"
+                }
+            ],
+            "description": "A PHP library with commonly used code blocks",
+            "time": "2018-12-19T01:53:34+00:00"
+        },
+        {
+            "name": "mariya/gendiff",
+            "version": "v6.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mariya1316/project-lvl2-s459.git",
+                "reference": "538058c7b63594bb18f69deb892c3c39910faa6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mariya1316/project-lvl2-s459/zipball/538058c7b63594bb18f69deb892c3c39910faa6e",
+                "reference": "538058c7b63594bb18f69deb892c3c39910faa6e",
+                "shasum": ""
+            },
+            "require": {
+                "docopt/docopt": "^1.0",
+                "funct/funct": "^1.0@dev",
+                "symfony/yaml": "^4.3@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.2@dev",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "bin": [
+                "bin/gendiff"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Parser.php",
+                    "src/Differ.php",
+                    "src/Ast.php",
+                    "src/Formats/Pretty.php",
+                    "src/Formats/Plain.php",
+                    "src/Formats/Json.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Mariya1316",
+                    "email": "dolmatovam0104@gmail.com"
+                }
+            ],
+            "description": "The second PHP project, utility to find differences in configuration files.",
+            "keywords": [
+                "console",
+                "difference",
+                "file",
+                "gendiff",
+                "php",
+                "project"
+            ],
+            "time": "2019-04-16T04:09:20+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "82ebae02209c21113908c229e9883c419720738a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
+                "reference": "82ebae02209c21113908c229e9883c419720738a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v4.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "c60ecf5ba842324433b46f58dc7afc4487dbab99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c60ecf5ba842324433b46f58dc7afc4487dbab99",
+                "reference": "c60ecf5ba842324433b46f58dc7afc4487dbab99",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "symfony/console": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-04-06T14:04:46+00:00"
+        },
         {
             "name": "wp-cli/php-cli-tools",
             "version": "v0.11.11",
