@@ -1,6 +1,6 @@
 # Brain Games
 [![Maintainability](https://api.codeclimate.com/v1/badges/1359ff7ff601cdb33634/maintainability)](https://codeclimate.com/github/Mariya1316/project-lvl1-s458/test_coverage)
-[![Build Status](https://travis-ci.org/Mariya1316/project-lvl1-s458.svg?branch=master)](https://travis-ci.org/Mariya1316/project-lvl1-s458)
+[![Build Status](https://travis-ci.org/Mariya1316/Brain-Games.svg?branch=master)](https://travis-ci.org/Mariya1316/Brain-Games)
 
 The first PHP project, a set of console mini-games
 ## Sample gameplay
@@ -51,7 +51,6 @@ Simple number:
 
 ```
 $ brain-prime
-
 ```
 
 
